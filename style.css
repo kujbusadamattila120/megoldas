@@ -1,0 +1,14 @@
+li {
+    width: 10%;
+    border: 1px solid red;
+}
+
+#nthMinta {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+span {
+    color: red;
+    font-weight: bolder;
+}

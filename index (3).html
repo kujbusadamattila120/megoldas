@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <form action="">
+        <h2>Sorszámozott lista létrehozása Javascriptben</h2>
+        <label for="elemek_szam">Lista elemeinek száma:</label>
+        <input type="number" name="" id="elemek_szam" value="30" min="5" max="100">
+        <input type="button" value="Lista létrehozása">
+        <hr>
+        <h3>li:nth-child() szelektor beállítása</h3>
+        <label for="nth_first">Melyik legyen az első kiválaszott sor?</label>
+        <input type="number" id="nth_first" value="1" min="0" max="15"
+            onchange="szelektorParamterValtozas(this,'span_nth_first')">
+
+        <label for="nth_n">Hány soronként ismétlődjön?</label>
+        <input type="number" id="nth_n" value="3" min="0" max="15"
+            onchange="szelektorParamterValtozas(this,'span_nth_n')">
+        <br>
+        <p id="nthMinta">:nth-child(
+            <span id="span_nth_n">3</span>n+<span id="span_nth_first">1</span>
+            )
+        </p>
+        <h3>Milyen színű legyen a sor háttere?</h3>
+        <label for="szinek_listaja">Színek:</label>
+        <select name="" id="szinek_listaja">
+            <option value="red">piros</option>
+            <option value="green">zöld</option>
+            <option value="blue">kék</option>
+            <option value="yellow">sárga</option>
+            <option value="gray">szürke</option>
+        </select>
+        <hr>
+        <p>Szelektor alkalmazása és színezés</p>
+        <input type="button" value="Színez">
+        <input type="button" value="Törli a színezést" onclick="szinekTorles()">
+    </form>
+    <hr>
+    <h4>Alapértelmezett formázások</h4>
+
+    <p style="font-family: monospace;">
+        li {
+        width: 10%;
+        border: 1px solid red;
+        }
+    </p>
+    <hr>
+    <div id="DIV_generalt_lista"></div>
+</body>
+
+</html>
